@@ -14,7 +14,7 @@ const contactsSchema = new Schema(
     },
     userId: {
       type: Schema.Types.ObjectId,
-      ref: 'users',
+      ref: 'User',
       required: true,
     },
   },
@@ -25,5 +25,3 @@ const contactsSchema = new Schema(
 );
 
 export const ContactsCollection = model('contacts', contactsSchema);
-// "email": "sleep@example.com",
-//     "password": "forget_us"
