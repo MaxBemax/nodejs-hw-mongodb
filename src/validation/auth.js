@@ -46,7 +46,7 @@ export const sendResetEmailSchema = Joi.object({
   }),
 });
 
-export const resetPasswordSchema = Joi.object({
+export const resetPwdSchema = Joi.object({
   password: Joi.string().required().messages({
     'string.base': 'password should be a string',
     'any.required': 'password is required',
