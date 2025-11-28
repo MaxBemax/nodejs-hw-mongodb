@@ -1,0 +1,38 @@
+type: object
+required:
+  - name
+  - phoneNumber
+  - contactType
+properties:
+  name:
+    description: "Contact's name. (Joi: min 3, max 20)"
+    type: string
+    minLength: 3
+    maxLength: 20
+    example: 'John Doe'
+  phoneNumber:
+    description: "Contact's phone number. (Joi: min 3, max 20)"
+    type: string
+    minLength: 3
+    maxLength: 20
+    example: '+380500505555'
+  contactType:
+    description: 'Type of contact. Required. Must be one of the enum values.'
+    type: string
+    enum: ['work', 'home', 'personal']
+    example: 'personal'
+  email:
+    description: "Contact's email address (Optional)."
+    type: string
+    format: email
+    minLength: 3
+    maxLength: 20
+    example: 'john.doe@example.com'
+  isFavourite:
+    description: 'Marks if the contact is a favorite (Optional, default: false).'
+    type: boolean
+    example: false
+  photo:
+    description: 'Photo file to upload.'
+    type: string
+    format: binary
